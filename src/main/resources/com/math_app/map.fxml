@@ -11,12 +11,12 @@
          <content>
             <Pane prefHeight="901.0" prefWidth="984.0" style="-fx-background-color: transparent; -fx-padding: 0;">
                <children>
-                  <Label alignment="CENTER" layoutX="137.0" layoutY="189.0" prefHeight="125.0" prefWidth="117.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 32px; -fx-border-width: 10px; -fx-background-radius: 32px;" text="Tutorial">
+                  <Label fx:id="tutorial" alignment="CENTER" layoutX="137.0" layoutY="189.0" prefHeight="125.0" prefWidth="117.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 32px; -fx-border-width: 10px; -fx-background-radius: 32px;" text="Tutorial">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" layoutX="434.0" layoutY="188.0" prefHeight="125.0" prefWidth="117.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 32px; -fx-border-width: 10px; -fx-background-radius: 32px;" text="Exercise">
+                  <Label fx:id="firstExercise" alignment="CENTER" layoutX="434.0" layoutY="188.0" prefHeight="125.0" prefWidth="117.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 32px; -fx-border-width: 10px; -fx-background-radius: 32px;" text="Exercise">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
