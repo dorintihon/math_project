@@ -18,7 +18,6 @@ import java.util.concurrent.atomic.AtomicReference;
 
 public class Login {
 
-
     public PasswordField password;
     public TextField username;
     public Button grade_two, grade_three, grade_one, grade_k, grade_four, loginButton;
@@ -126,17 +125,6 @@ public class Login {
         return BCrypt.hashpw(plainTextPassword, BCrypt.gensalt());
     }
 
-    /**
-     * Check if a plaintext password matches the hashed version.
-     *
-     * @param plainTextPassword the plaintext password to check
-     * @param hashedPassword the stored hashed password to check against
-     * @return true if the passwords match, false otherwise
-     */
-    public static boolean checkPassword(String plainTextPassword, String hashedPassword) {
-        return BCrypt.checkpw(plainTextPassword, hashedPassword);
-    }
-
 
     private void changeScene(String message) {
         System.out.println(message);
@@ -166,7 +154,7 @@ public class Login {
     private boolean userExists(String username) {
         String query = "SELECT COUNT(*) FROM users WHERE username = ?;";
 
-        try (Connection con = DriverManager.getConnection(url, dbUser, dbPassword);
+        try (Connection con = DriverManager.getConnection(DatabaseConfig.getUrl(), DatabaseConfig.getUser(), DatabaseConfig.getPassword());
              PreparedStatement pstmt = con.prepareStatement(query)) {
 
             pstmt.setString(1, username);
@@ -186,7 +174,7 @@ public class Login {
     private void insertData(String username, String password, int grade, String avatar) {
         String query = "INSERT INTO users (username, password, grade, avatar) VALUES (?, ?, ?, ?);";
 
-        try (Connection con = DriverManager.getConnection(url, dbUser, dbPassword);
+        try (Connection con = DriverManager.getConnection(DatabaseConfig.getUrl(), DatabaseConfig.getUser(), DatabaseConfig.getPassword());
              PreparedStatement pstmt = con.prepareStatement(query)) {
 
             pstmt.setString(1, username);
