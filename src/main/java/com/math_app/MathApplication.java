@@ -10,7 +10,7 @@ public class MathApplication extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(MathApplication.class.getResource("menu.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MathApplication.class.getResource("login.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Animals And Friends");

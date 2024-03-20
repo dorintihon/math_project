@@ -8,7 +8,7 @@ public class User {
 
     private int grade;
 
-    private ImageView avatar;
+    private String avatar;
 
 
     public User(String userName, String password) {
@@ -40,11 +40,11 @@ public class User {
         this.grade = grade;
     }
 
-    public ImageView getAvatar() {
+    public String getAvatar() {
         return avatar;
     }
 
-    public void setAvatar(ImageView avatar) {
+    public void setAvatar(String avatar) {
         this.avatar = avatar;
     }
 }
