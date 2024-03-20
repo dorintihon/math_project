@@ -18,9 +18,6 @@ import java.util.concurrent.atomic.AtomicReference;
 
 public class Login {
 
-    private final String url = "jdbc:mysql://aws.connect.psdb.cloud/mathtutor?sslMode=VERIFY_IDENTITY"; // Database URL
-    private final String dbUser = "egnemke8t4xjx4ql3cdy"; // Database username
-    private final String dbPassword = "pscale_pw_SPykOoPNaFqvmoeKxikgVFL44ekBEiOG3PS4gSEtuto"; // Database password
 
     public PasswordField password;
     public TextField username;
