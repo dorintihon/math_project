@@ -5,6 +5,7 @@ module com.example.math_app {
     requires java.sql;
     requires jbcrypt;
     requires dotenv.java;
+    requires java.desktop;
 
 
     opens com.math_app to javafx.fxml;

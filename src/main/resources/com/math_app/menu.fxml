@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -22,6 +23,7 @@
             <Image url="@../../images/play_btn.png" />
          </image></ImageView>
       <Label fx:id="gradeLabel" layoutX="471.0" layoutY="446.0" text="Grade: " />
+      <ProgressBar fx:id="progressBar" layoutX="390.0" layoutY="542.0" prefWidth="200.0" progress="1.0" />
 
    </children>
 </AnchorPane>

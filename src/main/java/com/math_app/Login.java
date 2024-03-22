@@ -172,15 +172,18 @@ public class Login {
     }
 
     private void insertData(String username, String password, int grade, String avatar) {
-        String query = "INSERT INTO users (username, password, grade, avatar) VALUES (?, ?, ?, ?);";
+        String query = "INSERT INTO users (username, password, grade, avatar, progress) VALUES (?, ?, ?, ?, ?);";
 
-        try (Connection con = DriverManager.getConnection(DatabaseConfig.getUrl(), DatabaseConfig.getUser(), DatabaseConfig.getPassword());
+        int progress = 0;
+
+        try (Connection con = DatabaseUtil.getConnection();
              PreparedStatement pstmt = con.prepareStatement(query)) {
 
             pstmt.setString(1, username);
             pstmt.setString(2, password);
             pstmt.setInt(3, grade);
             pstmt.setString(4, avatar);
+            pstmt.setInt(5, progress);
 
 
             int rowsAffected = pstmt.executeUpdate();
